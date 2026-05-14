@@ -10,6 +10,7 @@ import { barraFeedbackPaisClicado } from "./interface/barra_de_feedback.js";
 // Importando mecanicas de embaralhar paises logo no inicio do jogo e de mostrar países vizinhos
 import { EmbaralharPaisesIniciais } from "./mecanicas/embaralhar_paises.js";
 import { mostrarVizinhos } from "./mecanicas/mostrar_vizinhos.js";
+import { controlarTurno } from "./mecanicas/controlar_turno.js";
 
 const mapa = document.getElementById("mapa");
 const nomePais = document.getElementById("nomePais");
@@ -38,124 +39,22 @@ fetch("mapa.svg")
       mapa
     );
 
-    // Mostrando países que fazem fronteira com o país que for clicado
-    let jogadorAtual = "red";
+  
+    // Estado inicial para trocar turno (jogador que começa)
+   const estadoParaTrocarTurno = {
+    jogadorAtual: "red",
+    vizinhosValidos: []
+  };
 
-let vizinhosValidos = [];
-
-function corDoJogador(cor, jogador) {
-
-  if (jogador === "red") {
-    return cor === "red" || cor === "#ff0000";
-  }
-
-  if (jogador === "blue") {
-    return cor === "blue" || cor === "#0000ff";
-  }
-
-  return false;
-
-}
-
-territorios.forEach(territorio => {
-
-  territorio.addEventListener("click", () => {
-
-    const cor = territorio.getAttribute("fill");
-
-    // =========================
-    // PRIMEIRO CLIQUE
-    // =========================
-
-    if (
-      corDoJogador(cor, jogadorAtual)
-    ) {
-
-      // limpa fronteiras antigas
-      vizinhosValidos.forEach(v => {
-
-        if (
-          v.getAttribute("fill") === "#ffc0cb"
-        ) {
-
-          const corOriginal =
-            v.dataset.corOriginal;
-
-          v.setAttribute(
-            "fill",
-            corOriginal
-          );
-
-        }
-
-      });
-
-      vizinhosValidos = mostrarVizinhos(
+  // Mostrando países que fazem fronteira com o país que for clicado
+  territorios.forEach(territorio => {
+    territorio.addEventListener("click", () => {
+      controlarTurno(
         territorio,
-        fronteiras
+        fronteiras,
+        estadoParaTrocarTurno
       );
-
-      // salva cor original
-      vizinhosValidos.forEach(vizinho => {
-
-        vizinho.dataset.corOriginal =
-          vizinho.getAttribute("fill");
-
-        vizinho.setAttribute(
-          "fill",
-          "#ffc0cb"
-        );
-
-      });
-
-      return;
-    }
-
-    // =========================
-    // SEGUNDO CLIQUE
-    // =========================
-
-    if (
-      vizinhosValidos.includes(territorio)
-    ) {
-
-      // conquista território
-      territorio.setAttribute(
-        "fill",
-        jogadorAtual
-      );
-
-      // restaura outros vizinhos
-      vizinhosValidos.forEach(vizinho => {
-
-        if (vizinho !== territorio) {
-
-          vizinho.setAttribute(
-            "fill",
-            vizinho.dataset.corOriginal
-          );
-
-        }
-
-      });
-
-      // limpa lista
-      vizinhosValidos = [];
-
-      // troca turno INFINITAMENTE
-      jogadorAtual =
-        jogadorAtual === "red"
-          ? "blue"
-          : "red";
-
-      console.log(
-        "Turno:",
-        jogadorAtual
-      );
-
-    }
-
-  });
+    });
 
 });
   })
