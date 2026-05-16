@@ -13,6 +13,7 @@ export const listaPaises = [
   "Nigeria",
   "Congo",
   "Africa do Sul",
+  "Madagascar",
   "Egito",
   "Marrocos",
   "Estados Unidos",

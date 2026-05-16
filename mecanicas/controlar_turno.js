@@ -1,7 +1,27 @@
 import { mostrarVizinhos } from "./mostrar_vizinhos.js";
 
-
 // função para trocar a cor do jogador
+const boxVermelho =
+  document.getElementById("jogador-vermelho");
+
+const boxAzul =
+  document.getElementById("jogador-azul");
+
+  function atualizarBoxJogador(
+  jogadorAtual
+) {
+
+  boxVermelho.classList.remove("ativo");
+  boxAzul.classList.remove("ativo");
+
+  if (jogadorAtual === "red") {
+    boxVermelho.classList.add("ativo");
+  } else {
+    boxAzul.classList.add("ativo");
+  }
+
+}
+
 function corDoJogador(cor, jogador) {
   if (jogador === "red") {
     return cor === "red" || cor === "#ff0000";
@@ -45,7 +65,8 @@ export function controlarTurno(
     estado.vizinhosValidos =
       mostrarVizinhos(
         territorio,
-        fronteiras
+        fronteiras,
+        estado.jogadorAtual
       );
 
     // salva cor original e pinta
@@ -66,46 +87,60 @@ export function controlarTurno(
   }
 
   // SEGUNDO CLIQUE
+  // SEGUNDO CLIQUE
+if (
+  estado.vizinhosValidos.includes(
+    territorio
+  )
+) {
+
+  const cor =
+    territorio.getAttribute("fill");
+
+  // não faz nada se for do próprio jogador
   if (
-    estado.vizinhosValidos.includes(
-      territorio
+    corDoJogador(
+      cor,
+      estado.jogadorAtual
     )
   ) {
-
-    // conquista território
-    territorio.setAttribute(
-      "fill",
-      estado.jogadorAtual
-    );
-
-    // restaura os outros
-    estado.vizinhosValidos.forEach(vizinho => {
-
-      if (vizinho !== territorio) {
-
-        vizinho.setAttribute(
-          "fill",
-          vizinho.dataset.corOriginal
-        );
-
-      }
-
-    });
-
-    // limpa vizinhos
-    estado.vizinhosValidos = [];
-
-    // troca turno
-    estado.jogadorAtual =
-      estado.jogadorAtual === "red"
-        ? "blue"
-        : "red";
-
-    console.log(
-      "Turno:",
-      estado.jogadorAtual
-    );
-
+    return;
   }
 
+  // conquista território
+  territorio.setAttribute(
+    "fill",
+    estado.jogadorAtual
+  );
+
+  // restaura os outros
+  estado.vizinhosValidos.forEach(vizinho => {
+
+    if (vizinho !== territorio) {
+
+      vizinho.setAttribute(
+        "fill",
+        vizinho.dataset.corOriginal
+      );
+
+    }
+
+  });
+
+  estado.vizinhosValidos = [];
+
+  estado.jogadorAtual =
+    estado.jogadorAtual === "red"
+      ? "blue"
+      : "red";
+
+      atualizarBoxJogador(
+  estado.jogadorAtual
+);
+
 }
+  
+
+}
+
+atualizarBoxJogador("red"); 

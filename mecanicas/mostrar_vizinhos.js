@@ -1,6 +1,21 @@
+function corDoJogador(cor, jogador) {
+
+  if (jogador === "red") {
+    return cor === "red" || cor === "#ff0000";
+  }
+
+  if (jogador === "blue") {
+    return cor === "blue" || cor === "#0000ff";
+  }
+
+  return false;
+
+}
+
 export function mostrarVizinhos(
   territorio,
-  fronteiras
+  fronteiras,
+  jogadorAtual
 ) {
 
   const paisClicado = territorio.id;
@@ -11,12 +26,31 @@ export function mostrarVizinhos(
   const listaVizinhos = [];
 
   if (nomesVizinhos) {
+
     nomesVizinhos.forEach(nomeVizinho => {
+
       const vizinho =
         document.getElementById(nomeVizinho);
+
       if (vizinho) {
-        listaVizinhos.push(vizinho);
+
+        const cor =
+          vizinho.getAttribute("fill");
+
+        // NÃO adiciona países do próprio jogador
+        if (
+          !corDoJogador(
+            cor,
+            jogadorAtual
+          )
+        ) {
+
+          listaVizinhos.push(vizinho);
+
+        }
+
       }
+
     });
 
   }
