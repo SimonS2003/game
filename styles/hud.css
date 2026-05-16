@@ -10,6 +10,13 @@
   z-index: 10;
 }
 
+.titulo-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .timer {
   background: rgba(0,0,0,0.85);
   padding: 15px 25px;
@@ -34,7 +41,7 @@
 
 h1 {
   position: absolute;
-  top: 20px;
+  top: 00px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -45,8 +52,34 @@ h1 {
   text-align: center;
 }
 
-.amarelo { background: #f10f31; color: black; }
+.player {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.vermelho { background: #f10f31; color: black; }
 .azul { background: #3498db; }
 
-.numero { font-size: 22px; }
-.porcentagem { font-size: 16px; }
+.territorio {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+
+  font-size: 16px;
+  color: white;
+}
+.objetivo {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+
+  font-size: 16px;
+  color: white;
+}
