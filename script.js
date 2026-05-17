@@ -6,12 +6,13 @@ import { fronteiras } from "./entidades/fronteiras.js";
 // Importando timer e barra de feedback do país clicado da pasta interface
 import { iniciarTimer } from "./interface/timer.js";
 import { barraFeedbackPaisClicado } from "./interface/barra_de_feedback.js";
+import { aparecerPaises } from "./interface/evento_aparecer_pais.js";
 
 // Importando mecanicas de embaralhar paises logo no inicio do jogo e de mostrar países vizinhos
 import { EmbaralharPaisesIniciais } from "./mecanicas/embaralhar_paises.js";
 import { mostrarVizinhos } from "./mecanicas/mostrar_vizinhos.js";
 import { controlarTurno } from "./mecanicas/controlar_turno.js";
-import { aparecerPaises } from "./mecanicas/evento_aparecer_pais.js";
+
 
 const mapa = document.getElementById("mapa");
 const nomePais = document.getElementById("nomePais");
@@ -20,53 +21,50 @@ const display = document.getElementById("tempo");
 // CARREGANDO MAPA
 fetch("mapa.svg")
 
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Arquivo mapa.svg não encontrado");
-    }
-    return response.text();
-  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Arquivo mapa.svg não encontrado");
+      }
+      return response.text();
+    })
 
-  .then(svg => {
-    mapa.innerHTML = svg;
-    // Territórios (países)
-    const territorios = mapa.querySelectorAll("path");
+    .then(svg => {
+      mapa.innerHTML = svg;
+      // Territórios (países)
+      const territorios = mapa.querySelectorAll("path");
 
-    const tooltip =
-    document.createElement("div");
-
-    aparecerPaises(
-      territorios
-    );
-
-    // Distribuição inicial de países por jogadores (3 países pra cada jogador)
-    EmbaralharPaisesIniciais(
-      listaPaises,
-      jogador1,
-      jogador2,
-      mapa
-    );
-
-  
-    // Estado inicial para trocar turno (jogador que começa)
-   const estadoParaTrocarTurno = {
-    jogadorAtual: "red",
-    vizinhosValidos: []
-  };
-
-  // Mostrando países que fazem fronteira com o país que for clicado
-  territorios.forEach(territorio => {
-    territorio.addEventListener("click", () => {
-      controlarTurno(
-        territorio,
-        fronteiras,
-        estadoParaTrocarTurno
+      aparecerPaises(
+        territorios
       );
 
-      
-    });
+      // Distribuição inicial de países por jogadores (3 países pra cada jogador)
+      EmbaralharPaisesIniciais(
+        listaPaises,
+        jogador1,
+        jogador2,
+        mapa
+      );
 
-});
+    
+      // Estado inicial para trocar turno (jogador que começa)
+    const estadoParaTrocarTurno = {
+      jogadorAtual: "red",
+      vizinhosValidos: []
+    };
+
+    // Mostrando países que fazem fronteira com o país que for clicado
+    territorios.forEach(territorio => {
+      territorio.addEventListener("click", () => {
+        controlarTurno(
+          territorio,
+          fronteiras,
+          estadoParaTrocarTurno
+        );
+
+        
+      });
+
+  });
 
 
   })
