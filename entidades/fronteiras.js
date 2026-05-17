@@ -13,7 +13,7 @@
       Groelandia: ["Islandia", "Estados Unidos"],
       Islandia: ["Suecia", "Inglaterra"],
       Irlanda: ["Inglaterra"],
-      Inglaterra: ["Islandia", "Espanha", "Alemanha"],
+      Inglaterra: ["Islandia", "Espanha", "Alemanha", "Polonia"],
       Espanha: ["Inglaterra", "Polonia", "Marrocos", "Egito"],
       Alemanha: ["Inglaterra", "Polonia", "Espanha"],
       Polonia: ["Alemanha", "Egito", "Espanha", "Russia Ocidental"],
@@ -28,6 +28,7 @@
       Madagascar: ["Africa do Sul"],
       "Africa do Sul": ["Madagascar", "Sudao", "Congo"],
       "Egito": ["Sudao", "Nigeria", "Marrocos", "Oriente Medio", "Espanha"],
-      Nigeria: ["Sudao", "Congo", "Marrocos", "Egito"]
+      Nigeria: ["Sudao", "Congo", "Marrocos", "Egito"],
+      Marrocos: ["Egito", "Nigeria", "Espanha"]
 
     };

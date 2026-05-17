@@ -1,0 +1,16 @@
+[33mc20d531[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to ORIG_HEAD
+[33mc20d531[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33mc20d531[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: reset: moving to origin/main
+[33mc20d531[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: reset: moving to origin/main
+[33m73c8049[m HEAD@{4}: commit: adicionando parte visual dos jogadores
+[33m85e8125[m HEAD@{5}: commit: Organizando função de controlar turno (interação entre os jogadores)
+[33m9ba83a3[m HEAD@{6}: commit: Adicionando rodada dos jogadores (interação entre jogadores)
+[33m1c4bc96[m HEAD@{7}: reset: moving to HEAD
+[33m1c4bc96[m HEAD@{8}: reset: moving to origin/main
+[33m1c4bc96[m HEAD@{9}: reset: moving to HEAD
+[33m1c4bc96[m HEAD@{10}: commit: excluindo a pasta style.css, agora o css esta todo na pasta styles
+[33m4791f07[m HEAD@{11}: commit: Organizando a arquitetura do projeto em pastas e criando a função de mostrar paises vizinhos através da cor
+[33mdc36c9e[m HEAD@{12}: pull: Fast-forward
+[33mc139e39[m HEAD@{13}: commit: Segundo commit
+[33mc71949f[m HEAD@{14}: Branch: renamed refs/heads/master to refs/heads/main
+[33mc71949f[m HEAD@{16}: commit (initial): Primeiro commit
