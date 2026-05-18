@@ -1,43 +1,56 @@
 // lista de fronteiras
 export const fronteiras = {
-  
-      "Africa do Sul": ["Madagascar", "Sudao", "Congo"],
-      Alemanha: ["Inglaterra", "Polonia", "Espanha"],
+
+  // América do sul:
       Argentina: ["Brasil", "Bolivia", "Chile"],
       Australia: ["Indonesia", "Ilhas Salomao", "Singapura"],
       Bolivia: ["Chile", "Brasil", "Argentina"],
       Brasil: ["Argentina", "Bolivia", "Colombia", "Chile", "Nigeria"],
-      Canada: ["Estados Unidos", "Groelandia","Russia Oriental"],
       Chile: ["Colombia", "Brasil", "Bolivia", "Argentina"],
-      China: ["Russia Oriental", "India", "Japao","Mongolia","Vietna"],
       Colombia: ["Mexico", "Brasil", "Chile"],
-      Congo: ["Nigeria", "Africa do Sul", "Sudao"],
-      Egito: ["Sudao", "Nigeria", "Marrocos", "Polonia", "Oriente Medio", "Espanha"],
-      Espanha: ["Alemanha","Inglaterra", "Polonia", "Marrocos", "Egito"],
+
+  // América do Norte:
       "Estados Unidos": ["Canada", "Mexico"],
+      Mexico: ["Colombia", "Estados Unidos"],
+      Canada: ["Estados Unidos", "Groelandia","Russia Oriental"],
+
+  // Europa
+      Alemanha: ["Inglaterra", "Polonia", "Espanha"],
+      Espanha: ["Alemanha","Inglaterra", "Polonia", "Marrocos", "Egito"],
       Groelandia: ["Islandia", "Canada"],
-      "Ilhas Salomao": ["Australia", "Papua Nova-Guine"],
-      India: ["China", "Oriente Médio", "Russia Oriental", "Vietna", "Malasia"],
-      Indonesia: ["Australia", "Papua Nova-Guine"],
       Inglaterra: ["Islandia", "Espanha", "Alemanha", "Irlanda", "Polonia"],
       Irlanda: ["Inglaterra"],
       Islandia: ["Suecia", "Inglaterra", "Groelandia"],
-      Japao: ["China", "Russia Oriental"],
+      Polonia: ["Alemanha", "Egito", "Espanha", "Russia Ocidental","Oriente Médio"],
+      "Russia Ocidental": ["Suecia", "Polonia", "Oriente Médio", "Russia Oriental"],
+      Suecia: ["Islandia", "Russia Ocidental"],
+
+  // Africa
+      "Africa do Sul": ["Madagascar", "Sudao", "Congo"],
+      Congo: ["Nigeria", "Africa do Sul", "Sudao"],
+      Egito: ["Sudao", "Nigeria", "Marrocos", "Polonia", "Oriente Medio", "Espanha"],
       Madagascar: ["Africa do Sul"],
       Malasia: ["Singapura", "India"],
       Marrocos: ["Egito", "Nigeria", "Espanha"],
-      Mexico: ["Colombia", "Estados Unidos"],
-      Mongolia: ["Russia Oriental", "China"],
       Nigeria: ["Sudao", "Congo", "Marrocos", "Egito", "Brasil"],
-      "Nova Zelandia": ["Australia", "Vietna"],
-      "Oriente Médio": ["Egito", "India", "Polonia", "Russia Ocidental", "Russia Oriental"],
-      "Papua Nova-Guine": ["Ilhas Salomao", "Indonesia"],
-      Polonia: ["Alemanha", "Egito", "Espanha", "Russia Ocidental","Oriente Médio"],
-      "Russia Ocidental": ["Suecia", "Polonia", "Oriente Médio", "Russia Oriental"],
-      "Russia Oriental": ["Mongolia","Canada","China", "Russia Ocidental", "India", "Japao", "Oriente Médio"],
-      Singapura: ["Malasia", "Australia"],
       Sudao: ["Congo", "Africa do Sul", "Nigeria", "Egito"],
-      Suecia: ["Islandia", "Russia Ocidental"],
+      
+  // Ásia
+      China: ["Russia Oriental", "India", "Japao","Mongolia","Viatna"],
+      India: ["China", "Oriente Médio", "Russia Oriental", "Viatna", "Malasia"],
+      Japao: ["China", "Russia Oriental"],
+      "Oriente Médio": ["Egito", "India", "Polonia", "Russia Ocidental", "Russia Oriental"],
+      "Russia Oriental": ["Mongolia","Canada","China", "Russia Ocidental", "India", "Japao", "Oriente Médio"],
       Vietna: ["India", "China", "Nova Zelandia", "Indonesia"],
+      Mongolia: ["Russia Oriental", "China"],
+      
+  // Oceania
+      "Nova Zelandia": ["Australia", "Viatna"],
+      Indonesia: ["Australia", "Papua Nova-Guine"],
+      Malasia: ["Singapura", "India"],
+      "Papua Nova-Guine": ["Ilhas Salomao", "Indonesia"],
+      Australia: ["Indonesia", "Ilhas Salomao", "Singapura"],
+      Singapura: ["Malasia", "Australia"],
+      "Ilhas Salomao": ["Australia", "Papua Nova-Guine"]
 
     };
