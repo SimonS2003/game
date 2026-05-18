@@ -36,7 +36,7 @@ export const fronteiras = {
       Sudao: ["Congo", "Africa do Sul", "Nigeria", "Egito"],
       
   // Ásia
-      China: ["Russia Oriental", "India", "Japao","Mongolia","Viatna"],
+      China: ["Russia Oriental", "India", "Japao","Mongolia","Vietna"],
       India: ["China", "Oriente Médio", "Russia Oriental", "Viatna", "Malasia"],
       Japao: ["China", "Russia Oriental"],
       "Oriente Médio": ["Egito", "India", "Polonia", "Russia Ocidental", "Russia Oriental"],
