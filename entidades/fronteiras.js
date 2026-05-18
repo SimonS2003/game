@@ -3,6 +3,7 @@ export const fronteiras = {
 
   // América do sul:
       Argentina: ["Brasil", "Bolivia", "Chile"],
+      Australia: ["Indonesia", "Ilhas Salomao", "Singapura"],
       Bolivia: ["Chile", "Brasil", "Argentina"],
       Brasil: ["Argentina", "Bolivia", "Colombia", "Chile", "Nigeria"],
       Chile: ["Colombia", "Brasil", "Bolivia", "Argentina"],
@@ -29,6 +30,7 @@ export const fronteiras = {
       Congo: ["Nigeria", "Africa do Sul", "Sudao"],
       Egito: ["Sudao", "Nigeria", "Marrocos", "Polonia", "Oriente Medio", "Espanha"],
       Madagascar: ["Africa do Sul"],
+      Malasia: ["Singapura", "India"],
       Marrocos: ["Egito", "Nigeria", "Espanha"],
       Nigeria: ["Sudao", "Congo", "Marrocos", "Egito", "Brasil"],
       Sudao: ["Congo", "Africa do Sul", "Nigeria", "Egito"],
@@ -39,7 +41,8 @@ export const fronteiras = {
       Japao: ["China", "Russia Oriental"],
       "Oriente Médio": ["Egito", "India", "Polonia", "Russia Ocidental", "Russia Oriental"],
       "Russia Oriental": ["Mongolia","Canada","China", "Russia Ocidental", "India", "Japao", "Oriente Médio"],
-      Viatna: ["India", "China", "Nova Zelandia", "Indonesia"],
+      Vietna: ["India", "China", "Nova Zelandia", "Indonesia"],
+      Mongolia: ["Russia Oriental", "China"],
       
   // Oceania
       "Nova Zelandia": ["Australia", "Viatna"],
