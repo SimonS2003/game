@@ -69,14 +69,6 @@ de baixo acoplamento utilizando modulos independentes entre si, o que torna a ma
 ```bash
 # Clone o repositório
 git clone https://github.com/SimonS2003/game.git
-cd game
-
-# Instale as dependências
-npm install
-
-# Rode o servidor
-npm start
-
 # Acesse: http://localhost:3000
 ```
 
