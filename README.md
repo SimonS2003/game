@@ -92,7 +92,7 @@ npm start
 
 
 
-##Referências 
+Referências 
 Separação de Responsábilidades (Separation of Concerns):
 https://pt.stackoverflow.com/questions/417198/o-que-é-separação-de-interesses-soc-separation-of-concerns#:~:text=A%20Separação%20de%20Responsabilidades%20é,sejam%20responsáveis%20por%20responsabilidades%20distintas.
 
