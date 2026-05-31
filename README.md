@@ -1,4 +1,4 @@
-#QuestWar - Um jogo educativo
+QuestWar - Um jogo educativo
 
 ## Sobre o projeto
 **QuestWar** é um jogo inspirado em jogos de dominação como War e Risk, porém em vez de jogar os dados para dominar um país
