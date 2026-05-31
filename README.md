@@ -75,9 +75,7 @@ Nosso projeto foi bem extenso e por isso utilizamos muito a modularização e al
 Utilizamos a Separação de Responsabilidades (Separation of Concerns) separando o projeto em areas com funções diferentes
 como entidades, mecanicas, interface e styles. A pasta entidades sendo os países, jogadores como objetos centrais do sistema.
 A pasta mecanica contando com as principais mecanicas do jogo. A pasta interface responsável pelo que aparece na tela do jogador.
-E, também, a pasta styles que guarda separadamente os arquivos css de cada parte do jogo. Foi utilizado também uma abordagem
-de baixo acoplamento utilizando modulos independentes entre si, o que torna a manutenção mais facil.
-
+E, também, a pasta styles que guarda separadamente os arquivos css de cada parte do jogo. 
 ## Como rodar
 ### Localmente
 ```bash
@@ -102,5 +100,3 @@ Referências
 Separação de Responsábilidades (Separation of Concerns):
 https://pt.stackoverflow.com/questions/417198/o-que-é-separação-de-interesses-soc-separation-of-concerns#:~:text=A%20Separação%20de%20Responsabilidades%20é,sejam%20responsáveis%20por%20responsabilidades%20distintas.
 
-Baixo Acomplamento:
-https://omegadiogo.medium.com/alto-acoplamento-baixo-acoplamento-e-microsserviços-entendendo-os-conceitos-f50f6bf11cb1
