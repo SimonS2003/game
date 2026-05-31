@@ -10,6 +10,18 @@ educacional.
 O objetivo do projeto é utilizar a gameficação para o aprendizado através de um jogo com dinamicas interessantes para que as pessoas 
 possam ter uma forma diferente de aprendizado.
 
+## Como jogar
+Ao começar cada jogador começa com 3 países, ao começar a partida o primeiro jogador (jogador vermelho) deve clicar em um dos seus paises, 
+depois de clicar em um dos seus países aparecerá os países vizinhos
+![Tela do jogo](assets/screenshot_paisesvizinhos.png)
+
+Depois de apercer os países vizinhos e o jogador clicar em um país vizinho deve aparecer uma tela de pergunta para o jogador responder.
+![Tela do jogo](assets/screenshot_perguntas.png)
+
+
+Ao responder corretamente, o jogador ganha o país vizinho e se ele não responder corretamente não ganha o país vizinho, e de qualquer forma, 
+após isso a vez passa para o outro jogador.
+![Tela do jogo](assets/screenshot_jogador2.png)
 ## Estrutura do projeto
 ```
 questwar_projeto/
